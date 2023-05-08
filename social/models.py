@@ -9,6 +9,8 @@ class Post(models.Model):
     image = models.ImageField(blank= True)
     def __str__(self):
         return self.content[:50]
+    
+    
 class Friends(models.Model):
     person1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='person1')
     person2 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='person2')
